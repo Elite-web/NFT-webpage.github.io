@@ -1,0 +1,646 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* Body Part  */
+
+body {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1c1c28;
+}
+
+.BG {
+    background: url(bg1.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 11vh;
+}
+
+
+/* Navication part  */
+
+nav {
+    background: #9993931f;
+    z-index: 1;
+    position: sticky;
+    height: 75px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    /* font-weight: 500; */
+    font-family: patriot, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+label.logo:hover {
+    color: #5eb9ff;
+}
+
+nav ul {
+    display: flex;
+    float: right;
+    margin-right: 44.5rem;
+    position: relative;
+    right: 4rem;
+    top: -5rem
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: #c3c2d4;
+    font-family: poppins, sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
+    font-weight: bold;
+}
+
+a.active,
+a:hover {
+    color: #fdfdfd;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#btn {
+    display: flex;
+    color: white;
+    position: relative;
+    left: 75rem;
+    top: -62px;
+    border: 0px solid;
+    width: 7rem;
+    padding: 10px 19px;
+    color: white;
+    border-radius: 15px;
+    background-color: #0c72fff2;
+}
+
+#btn:hover {
+    box-shadow: inset 0px 0px 20px -1px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* Resposive navbar part */
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #000000c9;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* Hero secation part */
+
+.text-1 {
+    display: block;
+    position: relative;
+    left: 5rem;
+    width: 24rem;
+    height: 15rem;
+    top: 5rem;
+    color: whitesmoke;
+    font-size: 59px;
+    font-family: patriot, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.auto-type {
+    color: #6053d3;
+}
+
+#btn-2 {
+    border: 0px solid whitesmoke;
+    color: #fdfdfd;
+    position: relative;
+    top: 8rem;
+    left: 5rem;
+    padding: 14px 16px;
+    margin: 7px 4px;
+    background-color: #053ef7ed;
+    border-radius: 13px;
+}
+
+#btn-2:hover {
+    transform: scale(1px);
+    box-shadow: inset 0px 0px 21px -1px #14387e;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* popup form  */
+
+.close-btn {
+    position: absolute;
+    left: 17px;
+    top: 4px;
+    font-size: 38px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+.popup {
+    /* border: 1px solid whitesmoke; */
+    color: whitesmoke;
+    width: 27rem;
+    height: 26rem;
+    top: -20rem;
+    left: 44rem;
+    border-radius: 22px;
+    position: absolute;
+    background-color: #1c1c28;
+    box-shadow: 5px 2px 17px 10px rgb(255 255 255 / 41%);
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 0ms ease-in-out 200ms;
+    opacity: 0;
+}
+
+.popup.active {
+    top: 22rem;
+    /* left: 42rem; */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form {
+    position: absolute;
+    top: 2rem;
+}
+
+.form h2 {
+    position: relative;
+    left: 7rem;
+}
+
+.form ul {
+    position: relative;
+    left: 3.5rem;
+    top: 1rem;
+}
+
+.form ul li {
+    list-style: none;
+    margin: 19px 1px;
+    width: 20rem;
+    border: 1px solid #dbd9d98f;
+    padding: 10px 10px;
+    font-size: 19px;
+    border-radius: 7px;
+}
+
+.form ul li:hover {
+    cursor: pointer;
+}
+
+#meta {
+    width: 45px;
+    position: absolute;
+    top: 5px;
+    left: 16rem;
+}
+
+#coin {
+    width: 45px;
+    position: absolute;
+    top: 142px;
+    left: 16rem;
+}
+
+#portis {
+    width: 83px;
+    position: absolute;
+    top: 206px;
+    left: 14.5rem;
+}
+
+#trust {
+    width: 84px;
+    position: absolute;
+    top: 74px;
+    left: 14rem;
+}
+
+
+/* Hero section fade animation part  */
+
+.fade {
+    /* width: 53rem;
+    height: 31rem; */
+    width: 58rem;
+    height: 36rem;
+    background-image: url(./image/img-1.png);
+    background-size: cover;
+    position: relative;
+    left: 22rem;
+    top: -17rem;
+    opacity: 0.7;
+    animation: slide 30s infinite;
+}
+
+@keyframes slide {
+    25% {
+        background-image: url(./image/img-2.png);
+        background-size: cover;
+        width: 58rem;
+        height: 36rem;
+    }
+    50% {
+        background-image: url(./image/img-3.png);
+        background-size: cover;
+        width: 58rem;
+        height: 36rem;
+    }
+}
+
+
+/*  trade image  scetion part*/
+
+#traed-img {
+    display: inline;
+}
+
+#traed-img img {
+    width: 84rem;
+    height: 30rem;
+    position: relative;
+    top: -15rem;
+    border-radius: 8px;
+    box-shadow: 0px -4px 36px 1px rgb(60 108 231 / 54%);
+}
+
+
+/* FEATURED DROPS section part  */
+
+.featred h1 {
+    display: inline;
+    position: relative;
+    top: -14rem;
+    font-size: 40px;
+    left: 31rem;
+    color: whitesmoke;
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 45px 0px;
+}
+
+#box-1 {
+    color: #c3c2d4;
+    background-color: #525460a1;
+    /* border: 1px solid whitesmoke; */
+    position: relative;
+    top: -7rem;
+    left: 4rem;
+    height: 23rem;
+    display: flex;
+    border-radius: 17px;
+    width: 18rem;
+    margin: 2px 58px;
+}
+
+#box-1 img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 12px;
+    position: relative;
+    left: 22px;
+    bottom: -17px;
+}
+
+
+/* FEATURED DROPS section filp animation part  */
+
+.flip-card {
+    background-color: transparent;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 12px;
+    position: relative;
+    left: 22px;
+    bottom: -17px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    border-radius: 12px;
+}
+
+.flip-card-back {
+    background-color: #1c1c28;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+}
+
+.flip-card-back p {
+    padding: 40px 10px;
+}
+
+#box-2 {
+    color: #c3c2d4;
+    background-color: #525460a1;
+    position: relative;
+    top: -7rem;
+    left: 4rem;
+    height: 23rem;
+    display: flex;
+    border-radius: 17px;
+    width: 18rem;
+    margin: 2px 58px;
+}
+
+#btn-3 {
+    border: 1px solid whitesmoke;
+    background-color: #1c1c28;
+    color: #fffafa;
+    position: relative;
+    left: 24rem;
+    width: 0rem;
+    padding: 16px 105px;
+    top: -6rem;
+    width: 35rem;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+#btn-3:hover {
+    cursor: pointer;
+}
+
+
+/* Information NFT trader part  */
+
+.trader {
+    /* border: 2px solid whitesmoke; */
+    height: 37rem;
+    width: 100%;
+    position: relative;
+    top: -4rem;
+}
+
+.trader h2 {
+    position: relative;
+    left: 4rem;
+    top: 2rem;
+    font-size: 39px;
+    color: whitesmoke;
+    display: inline;
+}
+
+.trader p {
+    width: 37rem;
+    color: #ffffffc2;
+    position: relative;
+    top: 4rem;
+    left: 4rem;
+    font-size: 21px;
+}
+
+.trader img {
+    width: 22rem;
+    position: relative;
+    left: 52rem;
+    top: -12rem;
+    border-radius: 41px;
+}
+
+#trade-img {
+    width: 24rem;
+    height: 21rem;
+    display: inline;
+    position: relative;
+    left: -17rem;
+    top: 13rem;
+}
+
+#heading-2 {
+    position: relative;
+    top: -7rem;
+    font-size: 39px;
+    left: -8rem;
+}
+
+#pera-1 {
+    position: relative;
+    left: 39rem;
+    width: 33rem;
+    top: -5rem;
+}
+
+
+/* horizontal line  */
+
+#line {
+    color: whitesmoke;
+    position: relative;
+    top: 13rem;
+}
+
+
+/* Footer section part  */
+
+#footer {
+    height: 29rem;
+    position: relative;
+    top: 10rem;
+    background-color: #353544;
+}
+
+#footer h2 {
+    color: whitesmoke;
+    font-size: 40px;
+    position: relative;
+    left: 4rem;
+    display: inline;
+    top: 2rem;
+}
+
+#footer p {
+    width: 35rem;
+    color: #f5f5f5ab;
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    font-size: 20px;
+}
+
+.sp1 {
+    color: whitesmoke;
+    position: relative;
+    top: -10rem;
+    left: 55rem;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+.sp2 {
+    color: whitesmoke;
+    position: relative;
+    top: -6rem;
+    left: 44rem;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+.sp3 {
+    color: whitesmoke;
+    position: relative;
+    top: -2rem;
+    left: 33rem;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+.sp {
+    position: relative;
+    top: 2rem;
+}
+
+.fab fa-facebook-f {
+    width: 5rem;
+}
+
+
+/* footer scetion social media icon part  */
+
+.icon {
+    position: relative;
+    left: 55rem;
+    display: inline;
+}
+
+.icon i {
+    color: whitesmoke;
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    background: #f5f5f557;
+    border-radius: 36%;
+    font-size: 35px;
+    padding: 0px 10px;
+    margin: 12px 6px;
+}
+
+.icon i:hover {
+    cursor: pointer;
+}
+
+#line-2 {
+    position: relative;
+    bottom: -4rem;
+}
+
+#footer-text {
+    position: relative;
+    color: whitesmoke;
+    font-size: 18px;
+    bottom: -4rem;
+    left: 7rem;
+    display: inline;
+    width: 88rem;
+}
+
+#footer-text span {
+    position: relative;
+    left: 28rem;
+}
